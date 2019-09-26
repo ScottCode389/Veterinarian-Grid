@@ -1,0 +1,10 @@
+.wrapper__home {
+  display: grid;
+  grid-template-rows: 22vh 90vh 400px 775px 325px 400px 50px;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 200px) [col-end])  [center-end] minmax(6rem, 1fr) [full-end];  
+}
+
+.nav__link--active {
+  background-color: rgba($color-highlight, 0.8);
+  font-size: 1.3rem;
+}

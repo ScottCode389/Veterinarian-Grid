@@ -46,11 +46,11 @@
   grid-gap: 1px;  
   
   &__item {
-    background-color: $color-primary;
+    background-color: $color-box-purple;
   }
 
   &__link {  
-  background-color: $color-primary;  
+  background-color: $color-box-purple;  
   color: $color-gray-light;
   padding: 10px 30px;
   text-align: center;
@@ -64,9 +64,9 @@
   }
   
   &__link:hover {
-    background-color: rgba($color-highlight, 0.8);
+    background-color: $color-box-purple-light;
     color: $color-white;
-    text-decoration: underline;
+    font-size: 1.25rem;
     cursor: pointer;
     transform: translateY(-3px)  ;
     -webkit-transform: translateY(-3px)  ;

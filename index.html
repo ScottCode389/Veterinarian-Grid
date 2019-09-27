@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+
   <title>Grid - Northern Kentucky Pet Care Clinic</title>
 </head>
 
@@ -78,14 +79,12 @@
       <div class="about__us">
         <h2 class="about__heading">About Us</h2>
         <p class="about__text">Northern Kentucky Pet Care Clinic is a full service veterinary clinic that will meet
-          all of your pet veterinary needs, including pet chiropractic care and acupuncture. We also offer puppy classes
-          and behavior consults to help new puppy owners. Our staff of two
-          veterinarians and four assistants provide you and your pet with professionally designed pet wellness programs
-          that include vaccinations and parasite
-          prevention. We also provide medical treatment for pets that have suffered an illness or injury. We also
-          welcome exotic animals, "pocket pets" such as rabbits and ferrets, birds, and of course dogs and cats. Our
+          all of your pet's veterinary needs. Our staff will provide you and your pet with professionally designed pet
+          wellness programs
+          as well as medical treatment for pets that have suffered an illness or injury. We welcome
+          "pocket pets" such as rabbits and hamsters, birds, and of course dogs and cats. Our
           staff is prepared to offer emergency vet services any time that our office is open, and we partner with an
-          emergency after-hours clinic that is just 5 miles away. </p>
+          emergency after-hours clinic that is close by. </p>
       </div>
 
       <div class="about__photos">
@@ -104,9 +103,7 @@
       </div>
 
       <div class="about__officePhoto">
-        <figure class="about__officePhoto--1">
-          <img src="images/about_office.jpg" alt="office" class="photo__img">
-        </figure>
+        <img src="images/about_office_crop.jpg" alt="office" class="photo__img">
       </div>
 
       <div class="about__office">
@@ -115,17 +112,99 @@
           Our veterinary clinic is dedicated to the care and wellness of pets in Northern Kentucky. Our office is clean
           and comfortable and we offer a beautiful fenced-in outdoor area behind the office where you can take your pet
           if they have anxiety about being in an office or if they need a potty break!
-        </p>
+        </p><br>
+        <p class="about__text">We also offer cozy facilities for surgical patients who need to stay with us during
+          recovery. A technician remains with any of our patients that requires overnight care.</p>
       </div>
-
     </section>
 
     <sidebar class="sidebar">
-      Coupon and phone apps
+      <div class="newPatient">
+        <h2 class="sidebar__heading">We Welcome New Patients</h2>
+        <div class="coupon">
+          <i class="fas fa-cut"></i>
+          <h3 class="coupon__heading">New Client Special</h3>
+          <span class="coupon__discount">$10 off</span>
+          <span class="coupon__exam">First Comprehensive Exam</span>
+          <p class="coupon__text">Offer valid for first-time clients only. Discount valid for each pet in household.
+            Subject to change.</p>
+        </div> <!-- coupon -->
+      </div> <!-- newPatient -->
+
+      <div class="mobileApp">
+        <h2 class="sidebar__heading">
+          <span>Download our</span><br>
+          <span>Mobile App</span></h2>
+
+        <div class="mobileApp__phones">
+          <img src="images/sidebar_phone.jpg" alt="phone" class="mobileApp__img">
+          <p class="mobileApp__text">24-hour access to your pet's health records,
+            appointments, and refill requests.</p>
+          <div class="mobileApp__buttons">
+            <a href="#"><img src="images/download-app.svg" alt="App Store Button"></a>
+            <a href="#"><img src="images/download-app-android.png" alt="Play Store Button"
+                class="mobileApp__btn--img"></a>
+          </div> <!-- mobileApp__buttons -->
+        </div> <!-- mobileApp__phones -->
+      </div> <!-- mobileApp -->
     </sidebar>
 
     <section class="story">
-      Testimonials
+      <h2 class="story__heading">Testimonials</h2>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="story__slide">
+            <img src="images/testimonial_turtle.jpg" class="story__img">
+            <div class="story__testimony">
+              <blockquote class="story__testimony--1">
+                &ldquo;We found Tilly on the side of the road after being hit by a car. I took her to Northern Kentucky
+                Animal Clinic, not even sure if they would take a turtle as a patient. They took wonderful care of her
+                and
+                with their help, we have nursed her back to great health!&rdquo;
+              </blockquote>
+              <p class="story__source">Cindy Lou</p>
+            </div> <!-- testimony  -->
+          </div> <!-- story__slide -->
+        </div> <!-- myslides  -->
+
+        <div class="mySlides fade">
+          <div class="story__slide">
+            <img src="images/testimonials_bell.jpg" class="story__img">
+            <div class="story__testimony">
+              <blockquote class="story__testimony--2">
+                &ldquo;Bella's paw was cut when she was running around in the backyard. She was terrified when I took
+                her
+                into the veterinarian's office, but they were so patient and gentle with her, that she let them clean
+                and
+                wrap her paw with no issues. She's now running around on it again with no problem. Thanks!&rdquo;
+              </blockquote>
+              <p class="story__source">Stephanie</p>
+            </div> <!--  testimony  -->
+          </div> <!-- story__slide -->
+        </div>
+
+        <div class="mySlides fade">
+          <div class="story__slide">
+            <img src="images/testimonials_dog-cone.jpg" class="story__img">
+            <div class="story__testimony">
+              <blockquote class="story__testimony--3">
+                &ldquo;Lassie had surgery at your clinic last week and needed to stay for a couple of days. It was such
+                a
+                comfort to hear from your staff several times a day to let me know how she was doing. And I felt better
+                knowing someone was there with her at night. Kudos to a great veterinarian and great support
+                staff!&rdquo;
+              </blockquote>
+              <p class="story__source">Stephanie</p>
+            </div> <!--  testimony  -->
+          </div>
+        </div>
+      </div> <!--  slideshow_Container  -->
+      <br>
+      <div class="story__button">
+        <a href="#"><button class="btn story__btn">Read More</button></a>
+      </div> <!-- button -->
+
     </section>
     <div class="map">
       Map
@@ -139,6 +218,7 @@
   </div>
 
   <!-- Wrapper Ends Here -->
+  <script src="script.js"></script>
 </body>
 
 </html>

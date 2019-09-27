@@ -1,6 +1,107 @@
-.story {
-  background-color: lightpink;
+.story { 
 
   grid-row: 5 / span 1;
   grid-column: full-start / col-end 8;
+
+  // background-image: linear-gradient(rgba($color-white, .50), rgba($color-white, .50)), url(../images/testimonial_background3.jpg);
+  background: $color-box-purple;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, $color-about-green, $color-box-yellow, $color-box-purple);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-box-purple, 0.6)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  background-size: cover;
+  background-position: center; 
+  position: relative;  
+  font-weight: bold;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  &__heading {
+    // grid-column: 2 / 2;
+    // justify-content: center;
+    padding: 20px;    
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Lato, sans-serif;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: center;
+    padding: 0 20px; 
+  }
+
+  &__img {
+    height: 125px;
+    width: auto;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__testimony {
+    display: flex;
+    flex-direction: column; 
+    font-style: italic;   
+  }
+
+  &__source {
+    line-height: 30px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      background-color: $color-black;
+      height: 3px;
+      width: 10px;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;      
+    }
+  }
+
+  &__btn {
+    background-color: $color-box-purple;
+    // border: 1px solid $color-about-green;
+    color: $color-white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}  
+
+  /* Slideshow container */
+.slideshow-container {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  position: relative;
+  margin: auto;  
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }

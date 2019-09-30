@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/printStyle.css">
 
   <title>Grid - Northern Kentucky Pet Care Clinic</title>
 </head>
@@ -22,7 +23,7 @@
           <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="header__logo--image"
             height=50px width=85px>
           <span class="header__logo--text">Northern Kentucky Pet Care Clinic</span>
-        </div> <!-- contact--logo-->
+        </div> <!-- header-logo -->
         <div class="header__info">
           <div>&lpar;859&rpar; 123-2345</div>
           <div>
@@ -71,8 +72,15 @@
         </div>
         <p class="box__text">Request a refill of your pet's medication from out in-house pharmacy. Please allow a
           minimum of 24-hours for approval. We'll notify you when they are ready to be picked up!</p>
-        <button class="btn box__btn">Request Refill</button>
-      </div>
+        <button id="modal-btn" class="btn box__btn">Request Refill</button>
+        <div id="myModal" class="modal">
+          <div class="modal__content">
+            <span class="close-btn">&times;</span>
+            <p>This part of the website is currently under construction. Please call us at 859-123-2345 to request a
+              refill.</p>
+          </div> <!--  modal content  -->
+        </div> <!--  modal  -->
+      </div> <!--  box--3  -->
     </div> <!-- boxes -->
 
     <section class="about">
@@ -207,16 +215,65 @@
 
     </section>
     <div class="map">
-      Map
+      <h2 class="map__heading">Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49553.8592549453!2d-84.50316025759798!3d39.08105078259896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b1a35e723a9f%3A0xa327acc1057eb5f9!2sN%20Grand%20Ave%2C%20Kenton%20Vale%2C%20KY%2041075!5e0!3m2!1sen!2sus!4v1569623716811!5m2!1sen!2sus"
+        width="425" height="300" frameborder="0" style="border:1px solid black;" allowfullscreen=""
+        class="map__inset"></iframe>
     </div>
     <div class="info">
-      Hours
-    </div>
+      <h2 class="info__heading">Office Hours</h2>
+      <div class="info__wrapper">
+        <div class="info__schedule info__schedule--1">
+          <p class="info__day">Monday</p>
+          <p class="info__startTime">7:30 a.m.</p>
+          <p class="info__endTime">5:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--2">
+          <p class="info__day">Tuesday</p>
+          <p class="info__startTime">9:00 a.m.</p>
+          <p class="info__endTime">7:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--3">
+          <p class="info__day">Wednesday</p>
+          <p class="info__startTime">7:30 a.m.</p>
+          <p class="info__endTime">5:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--4">
+          <p class="info__day">Thursday</p>
+          <p class="info__startTime">9:00 a.m.</p>
+          <p class="info__endTime">7:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--5">
+          <p class="info__day">Friday</p>
+          <p class="info__startTime">7:30 a.m.</p>
+          <p class="info__endTime">2:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--6">
+          <p class="info__day">Saturday</p>
+          <p class="info__startTime">9:00 a.m.</p>
+          <p class="info__endTime">1:00 p.m.</p>
+        </div>
+        <div class="info__schedule info__schedule--7">
+          <p class="info__day">Sunday</p>
+          <p class="info__startTime">Closed</p>
+          <p class="info__endTime">Closed</p>
+        </div> <!-- schedule -->
+      </div> <!--  info wrapper  -->
+    </div> <!--  info  -->
+
     <footer class="footer">
-      Footer
+      <div class="footer__logo">
+        <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="footer__logo--image"
+          height=50px width=85px>
+      </div> <!-- header-logo -->
+      <div class="footer__copyright">
+        <p>&copy; 2019 Northern Kentucky Pet Care Clinic</p>
+        <hr>
+        <p>A fictitional veterinary clinic created to demonstrate CSS Grid and play with colors!</p>
+      </div>
     </footer>
   </div>
-
   <!-- Wrapper Ends Here -->
   <script src="script.js"></script>
 </body>

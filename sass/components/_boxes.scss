@@ -57,9 +57,13 @@
     &__btn {
       background-color: $color-gray-light-2;
       font-size: 1.25em;
-    }
-
-    
-  
+    } 
 }
+
+.modal__content {
+  border: 2px solid $color-box-purple;
+  color: $color-box-purple;
+}
+
+
 

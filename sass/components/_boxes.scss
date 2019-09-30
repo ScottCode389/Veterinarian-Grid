@@ -20,6 +20,12 @@
   grid-gap: 20px;
   background-color: $color-gray-light-2;
 
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      display: inherit;
+    }
+
     &--1 {
       // background-color: rgb(213, 43, 34);
       background-color: rgb(199, 44, 35);

@@ -15,6 +15,9 @@ button {
   button:hover {
     cursor: pointer; }
 
+a {
+  text-decoration: none; }
+
 html {
   box-sizing: border-box; }
 
@@ -348,6 +351,7 @@ h3 {
 .coupon {
   height: 200px;
   border: 3px dashed #dbc500;
+  color: black;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -592,6 +596,17 @@ input[type=reset] {
   font-size: 1.1rem;
   background-color: #5066b5;
   color: white; }
+
+.coupon__print {
+  height: 200px;
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px dashed black;
+  width: 400px;
+  margin: 20px; }
 
 .wrapper__home {
   display: grid;

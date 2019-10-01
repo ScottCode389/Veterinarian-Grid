@@ -15,6 +15,10 @@
     font-family: $font-display; 
     font-weight: bold;   
   }
+
+  &__link {
+    text-decoration: none;
+  }
     
   &__logo {
       display: flex;

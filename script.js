@@ -1,21 +1,106 @@
-var slideIndex = 0;
-showSlides();
+// var slideIndex = 0;
+// var Interval;
+// var millis = 1000;
+// showSlides();
 
-function showSlides() {
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) { slideIndex = 1 }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].className += " active";
+//   setTimeout(showSlides, 8000); // Change image every 10 seconds
+// }
+
+// startSlides();
+
+// function startSlides() {
+//   pauseSlides();
+//   nextSlide();
+//   interval = setInterval(nextSlide, millis);
+// }
+
+
+// function resumeSlides() {
+//   nextSlide();
+// }
+
+// function pauseSlides() {
+//   clearInterval(interval);
+// }
+
+// function nextSlide() {
+//   showSlide();
+//   slideIndex++;
+// }
+
+//  SLIDESHOW
+
+var slideIndex = 1;
+var millis = 7000;
+var interval;
+
+startSlides();
+
+function startSlides() {
+  pauseSlides();
+  nextSlide();
+  interval = setInterval(nextSlide, millis);
+}
+
+function resumeSlides() {
+  nextSlide();
+}
+
+function pauseSlides() {
+  clearInterval(interval);
+}
+
+function nextSlide() {
+  showSlide();
+  slideIndex++;
+}
+
+function plusSlides(n) {
+  clearInterval(interval);
+  slideIndex += n;
+  nextSlide();
+  interval = setInterval(nextSlide, millis);
+}
+
+function currentSlide(n) {
+  clearInterval(interval);
+  slideIndex = n + 1;
+  nextSlide();
+  interval = setInterval(nextSlide, millis);
+}
+
+function showSlide() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  // var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace(" active", "");
-  // }
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
   slides[slideIndex - 1].style.display = "block";
-  // dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 8000); // Change image every 10 seconds
+  dots[slideIndex - 1].className += " active";
 }
 
 //  MODAL

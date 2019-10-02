@@ -164,6 +164,12 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+  .footer__hr {
+    height: 1px;
+    width: 70%;
+    color: #fff;
+    opacity: .3;
+    margin: 8px 0; }
 
 .header {
   grid-column: 1 / -1;
@@ -401,8 +407,6 @@ h3 {
   grid-column: full-start / col-end 8;
   background: #5066b5;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #616c1e, #dbc500, #5066b5);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, rgba(80, 102, 181, 0.3), rgba(80, 102, 181, 0.6));
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
@@ -413,6 +417,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around; }
+  .story__headingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .story__headingContainer i {
+      font-size: 1.1rem; }
   .story__heading {
     padding: 20px;
     font-weight: bold;
@@ -423,7 +433,8 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 20px; }
+    padding: 0 35px;
+    opacity: 50%; }
   .story__img {
     height: 125px;
     width: auto;
@@ -477,6 +488,57 @@ h3 {
     opacity: .4; }
   to {
     opacity: 1; } }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  width: auto;
+  padding: 6px;
+  color: #717171;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px; }
+
+.prev:hover, .next:hover {
+  background-color: black;
+  color: white; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-top: 35px;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: #d7d7d7;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+  background-color: #717171; }
+
+.slideshow-nav {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.italicText {
+  font-size: .8rem;
+  font-style: italic;
+  text-align: center; }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {

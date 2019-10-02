@@ -25,5 +25,13 @@
     align-items: center;
     justify-content: center;
   }
+
+  &__hr {
+    height: 1px;
+    width: 70%;
+    color: $color-white;
+    opacity: .3;
+    margin: 8px 0;
+  }
 }
 

@@ -42,8 +42,7 @@
   }
 
   &__text {
-    font-size: .8rem;
-    font-style: italic;
+    @include italicSmall;
   }  
 }
 

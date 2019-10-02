@@ -3,12 +3,10 @@
   grid-row: 5 / span 1;
   grid-column: full-start / col-end 8;
 
-  // background-image: linear-gradient(rgba($color-white, .50), rgba($color-white, .50)), url(../images/testimonial_background3.jpg);
+  // background-image: linear-gradient(rgba($color-box-purple, .4), rgba($color-box-purple, .4)), url(../images/testimonials_background1.jpg);
   background: $color-box-purple;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, $color-about-green, $color-box-yellow, $color-box-purple);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-box-purple, 0.6)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+  background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-box-purple, 0.6)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
   background-size: cover;
   background-position: center; 
   position: relative;  
@@ -19,9 +17,17 @@ background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-
   align-items: center;
   justify-content: space-around;
 
-  &__heading {
-    // grid-column: 2 / 2;
-    // justify-content: center;
+  &__headingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 1.1rem;
+    }    
+  }
+
+  &__heading {    
     padding: 20px;    
     font-weight: bold;
     font-size: 2rem;
@@ -33,7 +39,8 @@ background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-
     flex-direction: row;
     justify-content: center;   
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 35px;     
+    opacity: 50%;
   }
 
   &__img {
@@ -75,7 +82,7 @@ background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-
   }
 }  
 
-  /* Slideshow container */
+/* Slideshow container */
 .slideshow-container {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
@@ -99,6 +106,64 @@ background: linear-gradient(to right, rgba($color-box-purple, 0.3), rgba($color-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  width: auto;
+  padding: 6px;
+  color: $color-gray-dark;
+  
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: black;
+  color: white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin-top: 35px;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: $color-gray-light-2;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: $color-gray-dark;
+}
+
+.slideshow-nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.italicText {
+  @include italicSmall;
+  text-align: center;
 }
 
 /* On smaller screens, decrease text size */

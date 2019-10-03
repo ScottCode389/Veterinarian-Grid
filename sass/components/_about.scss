@@ -70,8 +70,9 @@
 }
 
 .photo__img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+  @include galleryImage;
+  // height: 100%;
+  // width: 100%;
+  // object-fit: cover;
+  // display: block;
 }

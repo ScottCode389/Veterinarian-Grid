@@ -27,127 +27,128 @@
         </div>
       </div>
     </div> <!-- header__contact-->
+  </header>
 
-    <div class="appt__title">
-      <h1 class="appt__heading">Request an Appointment</h1>
-    </div>
+  <div class="appt__title">
+    <h1 class="appt__heading">Request an Appointment</h1>
+  </div>
 
-    <div class="form__wrapper">
+  <div class="form__wrapper">
 
-      <div class="form__wrapper--hours">
-        <h2 class="appt__heading--1">Office Hours</h2>
-        <div class="appt__hours appt__hours--1">
-          <span>Monday</span>
-          <span>7:30 a.m. - 5:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--2">
-          <span>Tuesday</span>
-          <span>9:00 a.m. - 7:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--3">
-          <span>Wednesday</span>
-          <span>7:30 a.m. - 5:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--4">
-          <span>Thursday</span>
-          <span>9:00 a.m. - 7:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--5">
-          <span>Friday</span>
-          <span>7:30 a.m. - 2:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--6">
-          <span>Saturday</span>
-          <span>9:00 a.m. - 1:00 p.m.</span>
-        </div>
-        <div class="appt__hours appt__hours--7">
-          <span>Sunday</span>
-          <span>Closed</span>
-        </div>
-      </div> <!--  appt hours  -->
+    <div class="form__wrapper--hours">
+      <h2 class="appt__heading--1">Office Hours</h2>
+      <div class="appt__hours appt__hours--1">
+        <span>Monday</span>
+        <span>7:30 a.m. - 5:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--2">
+        <span>Tuesday</span>
+        <span>9:00 a.m. - 7:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--3">
+        <span>Wednesday</span>
+        <span>7:30 a.m. - 5:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--4">
+        <span>Thursday</span>
+        <span>9:00 a.m. - 7:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--5">
+        <span>Friday</span>
+        <span>7:30 a.m. - 2:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--6">
+        <span>Saturday</span>
+        <span>9:00 a.m. - 1:00 p.m.</span>
+      </div>
+      <div class="appt__hours appt__hours--7">
+        <span>Sunday</span>
+        <span>Closed</span>
+      </div>
+    </div> <!--  appt hours  -->
 
-      <div class="form__wrapper--request">
-        <form class="form">
-          <label for="firstName" class="ownerName__first">
-            First Name:<input type="text" placeholder="First Name">
-          </label>
-          <label for="lastName">
-            Last Name:<input type="text" placeholder="Last Name">
-          </label>
+    <div class="form__wrapper--request">
+      <form class="form">
+        <label for="firstName" class="ownerName__first">
+          First Name:<input type="text" placeholder="First Name">
+        </label>
+        <label for="lastName">
+          Last Name:<input type="text" placeholder="Last Name">
+        </label>
 
-          <label for="phone" class="ownerContact__first">
-            Phone:<input type="tel" placeholder="Phone Number">
-          </label>
-          <label for="email">
-            Email:<input type="email" placeholder="Email" required>
-          </label>
+        <label for="phone" class="ownerContact__first">
+          Phone:<input type="tel" placeholder="Phone Number">
+        </label>
+        <label for="email">
+          Email:<input type="email" placeholder="Email" required>
+        </label>
 
-          <label for="petName">
-            Pet:<input type="text" placeholder="Pet's Name">
-          </label>
+        <label for="petName">
+          Pet:<input type="text" placeholder="Pet's Name">
+        </label>
 
-          <p class="form--paragraph">Species:</p>
-          <label for="species">
-            <div class="form--radio">
-              <input type="radio" name="species">Dog
-              <input type="radio" name="species">Cat
-              <input type="radio" name="species">Rabbit
-              <input type="radio" name="species">Bird
-              <input type="radio" name="species">Other (please specify in comments)
-            </div>
-          </label>
-
-          <hr class="form__wrapper--hr">
-
-          <label for="firstDateChoice">
-            <div class="form--flex">
-              1st Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
-              Time of Day:
-              <select>
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
-              </select>
-            </div>
-          </label>
-
-          <label for="secondDateChoice">
-            <div class="form--flex">
-              2nd Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
-              Time of Day:
-              <select placeholder="Select time of day">
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
-              </select>
-            </div>
-          </label>
-
-          <label for="serviceRequested">
-            <div class="form--flex m-y">
-              Service Requested:
-              <select id="serviceRequest">
-                <option value="Service requested">Service Requested</option>
-                <option value="Annual physical exam">Annual physical exam</option>
-                <option value="Grooming">Grooming</option>
-                <option value="Sick pet">Sick pet</option>
-                <option value="Dental Cleaning">Dental Cleaning</option>
-                <option value="Vaccinations">Vaccinations</option>
-              </select>
-            </div>
-          </label>
-          <label for="comments">
-            Comments:<br>
-            <textarea name="comments" rows="5" cols="110" maxlength="300"></textarea>
-          </label>
-          <div class="form--buttons">
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+        <p class="form--paragraph">Species:</p>
+        <label for="species">
+          <div class="form--radio">
+            <input type="radio" name="species">Dog
+            <input type="radio" name="species">Cat
+            <input type="radio" name="species">Rabbit
+            <input type="radio" name="species">Bird
+            <input type="radio" name="species">Other (please specify in comments)
           </div>
+        </label>
 
-        </form>
-      </div> <!-- form wrapper request-->
-    </div> <!-- form wrapper -->
+        <hr class="form__wrapper--hr">
+
+        <label for="firstDateChoice">
+          <div class="form--flex">
+            1st Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
+            Time of Day:
+            <select>
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
+            </select>
+          </div>
+        </label>
+
+        <label for="secondDateChoice">
+          <div class="form--flex">
+            2nd Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
+            Time of Day:
+            <select placeholder="Select time of day">
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
+            </select>
+          </div>
+        </label>
+
+        <label for="serviceRequested">
+          <div class="form--flex m-y">
+            Service Requested:
+            <select id="serviceRequest">
+              <option value="Service requested">Service Requested</option>
+              <option value="Annual physical exam">Annual physical exam</option>
+              <option value="Grooming">Grooming</option>
+              <option value="Sick pet">Sick pet</option>
+              <option value="Dental Cleaning">Dental Cleaning</option>
+              <option value="Vaccinations">Vaccinations</option>
+            </select>
+          </div>
+        </label>
+        <label for="comments">
+          Comments:<br>
+          <textarea name="comments" rows="5" cols="110" maxlength="300"></textarea>
+        </label>
+        <div class="form--buttons">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+
+      </form>
+    </div> <!-- form wrapper request-->
+  </div> <!-- form wrapper -->
 
 </body>
 

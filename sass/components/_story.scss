@@ -18,9 +18,7 @@
   justify-content: space-around;
 
   &__headingContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include headingContainer;
 
     i {
       font-size: 1.1rem;

@@ -1,0 +1,91 @@
+.services {
+
+  &__headingContainer {
+    @include headingContainer;
+  
+    i {
+      font-size: 2rem;
+    } 
+  }  
+  
+    &__heading {
+      @include heading;
+      margin: 30px 25px;
+    }
+  
+    &__name {
+      text-decoration: underline;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  
+    &__footer {
+      margin-top: 40px;
+    }
+
+    &__card {
+      width: 340px;
+      overflow: hidden;
+      position: relative;
+      transition: 2s ease;
+      -webkit-transition: 2s ease;
+      -moz-transition: 2s ease;
+      -ms-transition: 2s ease;
+      -o-transition: 2s ease;
+
+      &--heading {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      &--image {
+        height: 100%;
+        width: 340px;
+        object-fit: cover;
+        display: block;
+        opacity: 1;
+        transition: 1s ease;
+        backface-visibility: hidden;
+      }
+
+      &--text {
+        background-color: rgba($color-gray-light, 0.4);
+        border: 1px solid $color-gray-light;
+        padding: 0 20px;
+        font-weight: bold;
+        position: absolute;
+        transform: translateY(0);
+        transition: 3s ease;
+        -webkit-transition: 2s ease;
+        -moz-transition: 2s ease;
+        -ms-transition: 2s ease;
+        -o-transition: 2s ease;
+      }
+    }
+
+    &__wrapper {
+      margin-bottom: 40px;
+      padding: 30px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__card:hover .services__card--image {
+      opacity: .2;
+    }
+    
+    &__card:hover .services__card--text {      
+      transform: translateY(-200px);
+      z-index: 5;      
+      -webkit-transform: translateY(-200px);
+      -moz-transform: translateY(-200px);
+      -ms-transform: translateY(-200px);
+      -o-transform: translateY(-200px);
+}
+}
+

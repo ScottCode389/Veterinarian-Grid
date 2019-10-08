@@ -1,0 +1,66 @@
+.aboutUs {
+
+&__headingContainer {
+  @include headingContainer;
+
+  i {
+    font-size: 2rem;
+  } 
+}  
+
+  &__heading {
+    @include heading;
+    margin: 30px 25px;
+  }
+
+  &__name {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  &__footer {
+    margin-top: 40px;
+  }
+}
+
+.vet {
+
+  display: grid;
+  grid-template-columns: 150px 1fr;
+
+  &__img {
+    grid-column: 1 / span 1;
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px  ;
+    -webkit-border-radius: 10px  ;
+    -moz-border-radius: 10px  ;
+    -ms-border-radius: 10px  ;
+    -o-border-radius: 10px  ;
+  }
+
+  &__hr {
+    width: 80%;
+    height: 1px;
+    color: $color-box-yellow;
+    margin: 20px auto;
+  }
+
+  &__info {
+    grid-column: 2 / -1;
+
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.staff {  
+  padding: 0 40px;
+}
+

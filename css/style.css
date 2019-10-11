@@ -54,12 +54,17 @@ h3 {
   .about__heading {
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif; }
-  .about__us {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 4;
+  .about__us, .about__office {
     padding: 20px;
     line-height: 1.2;
     font-size: 1rem; }
+    @media screen and (max-width: 1100px) {
+      .about__us, .about__office {
+        line-height: 1.15;
+        font-size: .9rem; } }
+  .about__us {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4; }
   .about__photos {
     grid-row: 1 / span 2;
     grid-column: 5 / span 5;
@@ -83,10 +88,7 @@ h3 {
     grid-column: 1 / span 4; }
   .about__office {
     grid-row: 3 / span 2;
-    grid-column: 5 / span 5;
-    padding: 20px;
-    line-height: 1.2;
-    font-size: 1rem; }
+    grid-column: 5 / span 5; }
 
 .photo__img {
   height: 100%;
@@ -104,6 +106,19 @@ h3 {
   -moz-transform: translateY(-15px);
   -ms-transform: translateY(-15px);
   -o-transform: translateY(-15px); }
+  @media screen and (max-width: 1100px) {
+    .boxes {
+      grid-column: full-start / full-end;
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+      margin-top: 35px;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none; } }
+  @media screen and (max-width: 900px) {
+    .boxes {
+      margin-top: 10px; } }
 
 .box {
   height: 325px;
@@ -113,6 +128,13 @@ h3 {
   grid-template-rows: 2em 1fr 3em;
   grid-gap: 20px;
   background-color: #d7d7d7; }
+  @media screen and (max-width: 1100px) {
+    .box {
+      padding: 25px; } }
+  @media screen and (max-width: 900px) {
+    .box {
+      padding: 20px;
+      height: 275px; } }
   .box__link {
     text-decoration: none;
     color: inherit;
@@ -124,21 +146,41 @@ h3 {
   .box--3 {
     background-color: #5066b5; }
   .box__heading {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #fff;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
+    @media screen and (max-width: 1100px) {
+      .box__heading {
+        font-size: 1.1em; } }
+    @media screen and (max-width: 900px) {
+      .box__heading {
+        font-size: 1em; } }
     .box__heading i {
       margin-right: 15px; }
     .box__heading h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: inherit; }
   .box__text {
     color: #fff;
     font-size: 1em;
-    align-self: start; }
+    text-align: center; }
+    @media screen and (max-width: 1100px) {
+      .box__text {
+        font-size: .9em; } }
+    @media screen and (max-width: 900px) {
+      .box__text {
+        font-size: .8em; } }
   .box__btn {
     background-color: #d7d7d7;
     font-size: 1.25em; }
+    @media screen and (max-width: 900px) {
+      .box__btn {
+        padding: 5px 15px;
+        font-size: 1em;
+        width: 70%;
+        margin: 0 auto; } }
 
 .modal__content {
   border: 2px solid #5066b5;
@@ -173,17 +215,19 @@ h3 {
 
 .header {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-rows: 85px 46px;
-  grid-template-columns: auto; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eceeee; }
   .header__contact {
     display: flex;
     justify-content: space-around;
     background-color: #eceeee;
-    box-shadow: inset 0 0 5px darkgray;
     font-family: "Roboto Slab", sans-serif;
     font-weight: bold; }
+    @media screen and (min-height: 649.25px) {
+      .header__contact {
+        box-shadow: none; } }
   .header__link {
     text-decoration: none; }
   .header__logo {
@@ -202,12 +246,13 @@ h3 {
     line-height: 1.4; }
   .header__nav {
     background-color: #eceeee;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    box-shadow: 0 -3px 5px -1px #969696; }
 
 .nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: 1px; }
+  grid-column-gap: 1px; }
   .nav__item {
     background-color: #5066b5; }
   .nav__link {
@@ -239,12 +284,18 @@ h3 {
   background-size: cover;
   background-position: center;
   position: relative; }
+  @media screen and (max-width: 900px) {
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/DogVet_resized.jpg); } }
   .hero__heading {
     color: #d7d7d7;
     position: absolute;
     left: 50%;
     bottom: 20%;
     text-align: center; }
+    @media screen and (max-width: 1100px) {
+      .hero__heading {
+        font-size: 2.5rem; } }
 
 .info {
   background-color: #d7d7d7;
@@ -558,11 +609,11 @@ h3 {
   text-align: center;
   margin: 30px 25px; }
 
-.aboutUs__name {
-  text-decoration: underline;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 1.1rem; }
+.aboutUs__text {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 50px;
+  margin-bottom: 40px; }
 
 .aboutUs__footer {
   margin-top: 40px; }
@@ -570,6 +621,11 @@ h3 {
 .vet {
   display: grid;
   grid-template-columns: 150px 1fr; }
+  .vet__name {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem; }
   .vet__img {
     grid-column: 1 / span 1;
     height: 100px;
@@ -581,6 +637,8 @@ h3 {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px; }
+  .vet__text {
+    font-size: 1.15rem; }
   .vet__hr {
     width: 80%;
     height: 1px;
@@ -807,6 +865,12 @@ input[type=reset] {
   display: grid;
   grid-template-rows: 22vh 90vh 400px 775px 325px 400px 75px;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 200px) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media screen and (min-height: 649.25px) {
+    .wrapper__home {
+      grid-template-rows: 18vh 90vh 400px 775px 325px 400px 75px; } }
+  @media screen and (max-width: 900px) {
+    .wrapper__home {
+      grid-template-rows: 23vh 89vh 295px 775px 325px 400px 75px; } }
 
 .nav__link--active {
   background-color: #6581e6;
@@ -825,11 +889,17 @@ input[type=reset] {
   text-align: center;
   margin: 30px 25px; }
 
+.services__text {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 50px;
+  margin-bottom: 30px; }
+
 .services__name {
   text-decoration: underline;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 1.1rem; }
+  font-size: 1.5rem; }
 
 .services__footer {
   margin-top: 40px; }

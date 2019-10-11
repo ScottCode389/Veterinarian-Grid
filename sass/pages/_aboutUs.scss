@@ -13,13 +13,12 @@
     margin: 30px 25px;
   }
 
-  &__name {
-    text-decoration: underline;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
+  &__text {
+    @include headingParagraph;
+      padding: 0 50px;
+      margin-bottom: 40px;
   }
-
+  
   &__footer {
     margin-top: 40px;
   }
@@ -29,6 +28,14 @@
 
   display: grid;
   grid-template-columns: 150px 1fr;
+
+  &__name {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
 
   &__img {
     grid-column: 1 / span 1;
@@ -41,6 +48,10 @@
     -moz-border-radius: 10px  ;
     -ms-border-radius: 10px  ;
     -o-border-radius: 10px  ;
+  }
+
+  &__text {
+    font-size: 1.15rem;
   }
 
   &__hr {

@@ -12,12 +12,18 @@
       @include heading;
       margin: 30px 25px;
     }
+
+    &__text {
+      @include headingParagraph;
+      padding: 0 50px;
+      margin-bottom: 30px;
+    }
   
     &__name {
       text-decoration: underline;
       margin-bottom: 10px;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
     }
   
     &__footer {

@@ -1,9 +1,7 @@
 .about {
   grid-column: full-start / col-end 8;
   grid-row: 4 / span 1;  
-  background-color: $color-about-green-alternate;
-  // border: 1px solid $color-gray-light-2;  
-  
+  background-color: $color-about-green-alternate;  
   color: $color-white;  
 
   display: grid;
@@ -15,13 +13,21 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  &__us {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 4; 
-
+  &__us,
+  &__office {
     padding: 20px;
     line-height: 1.2;
     font-size: 1rem;
+
+    @media screen and (max-width: $bp-largest) {
+      line-height: 1.15;
+      font-size: .9rem;
+    }
+  }
+
+  &__us {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 4;    
   }
 
   &__photos {
@@ -61,11 +67,7 @@
 
   &__office {
     grid-row: 3 / span 2;
-    grid-column: 5 / span 5;
-
-    padding: 20px;
-    line-height: 1.2;
-    font-size: 1rem;
+    grid-column: 5 / span 5;    
   }
 }
 

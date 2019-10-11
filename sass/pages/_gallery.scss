@@ -16,8 +16,7 @@
   }
 
   &__text {
-    text-align: center;
-    font-size: 1.2rem;
+    @include headingParagraph;
   }
 
   &__img {

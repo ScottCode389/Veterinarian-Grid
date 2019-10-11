@@ -2,6 +2,15 @@
   display: grid;
   grid-template-rows: 22vh 90vh 400px 775px 325px 400px 75px;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 200px) [col-end])  [center-end] minmax(6rem, 1fr) [full-end];  
+  
+  @media screen and (min-height: 649.25px) {
+    grid-template-rows: 18vh 90vh 400px 775px 325px 400px 75px;
+  }
+
+  @media screen and (max-width: $bp-large) {
+    grid-template-rows: 23vh 89vh 295px 775px 325px 400px 75px;
+  }
+  
 }
 
 .nav__link--active {

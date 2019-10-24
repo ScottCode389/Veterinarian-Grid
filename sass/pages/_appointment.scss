@@ -4,11 +4,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & span {
+    display: none;
+    color: $color-gray-light;
+
+    @media screen and (max-width: $bp-small) {
+      display: inline-block;
+      font-size: .8rem;
+    }
+  }
 }
 
 .appt__heading {
+  height: 35px;
+  display: flex;  
+  align-items: center;
   font-size: 1.25rem;
-  color: $color-gray-light;   
+  color: $color-gray-light; 
+  
+  @media screen and (max-width: $bp-small) {
+    font-size: .8rem;
+    margin-right: 20px;
+  }
 
   &--1 {
     margin-bottom: 20px;
@@ -16,22 +34,50 @@
 }
 
 .form__wrapper {
-  
+  font-size: 1em;
   display: grid;
-  grid-template-columns: 350px 1fr;    
+  grid-template-columns: 350px 1fr;  
+  
+  @media screen and (max-width: $bp-large) {
+    font-size: .9em;
+    grid-template-columns: 300px 1fr;
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 275px 1fr;
+  }  
+
+  @media screen and (max-width: $bp-small) {
+    font-size: .8em;
+  }
   
     &--hours {
       background-color: $color-gray-light-2;
-      padding: 20px;      
-    }
-    
-    &--1 {
-      background-color: $color-gray-light;
-    }
+      padding: 40px;  
+      
+      @media screen and (max-width: $bp-large) {
+        padding: 20px;
+      }
 
+      @media screen and (max-width: $bp-medium) {
+        grid-row: 1 / span 1;
+        justify-content: center;
+        align-items: center;
+      }
+    }    
+    
     &--request {
+      grid-column: 2 / span 1;
+      line-height: 15px;
+
       padding: 20px;
       background-color: $color-gray-light;
+
+      @media screen and (max-width: $bp-medium) {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+      }
     }
 
     &--hr {
@@ -73,19 +119,6 @@
   }
 }
 
-.appt__request {
-  grid-column: 2 / span 1;
-  line-height: 15px;
-}
-
-.ownerName,
-.ownerContact {
-  display: flex;
-
-  &__first {
-    margin-right: 50px;
-  }
-}
 
 .form {   
   &--paragraph {
@@ -93,24 +126,60 @@
   }
 
   &--radio {
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
+
+    & textarea {
+      height: 22px;
+      margin-left: 10px;
+      vertical-align: text-bottom;
+      border: 1px solid $color-gray-light-2;
+    }
   }  
 }
 
 .form--flex {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-evenly;
+
+  & p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  & span {
+    margin-right: 10px;
+
+    @media screen and (max-width: $bp-large) {
+      display: none;
+    }
+  }
+
+  & select {
+    width: 30%;
+
+    @media screen and (max-width: $bp-large) {
+      width: 50%;
+    }
+  }
 }
 
 input[type=radio] {  
   margin-right: 6px;;
-  margin-left: 20px;
+  margin-left: 20px;  
+
+  @media screen and (max-width: $bp-small) {
+    margin-right: 3px;
+    margin-left: 10px;
+  }
 }
 
 input[type=text], 
 input[type=tel],
 input[type=email],
+input[type=date],
 select {
   width: 100%;
   padding: 12px 20px;
@@ -124,21 +193,34 @@ select {
   -o-border-radius: 4px;
 }
 
-select {
-  width: 40%;  
+input[type=date]{
+  display: block;
+  width: 23%;  
+  margin-right: 20px;  
+  padding: 12px 5px;
+
+  @media screen and (max-width: $bp-large) {
+    width: 50%;
+  }
+}
+
+.apptRequest {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .m-y {
   margin: 10px 0;
 }
 
-#serviceRequest {
-  width: 80%;
-}
-input[type=date] {
-  width: 20%;
-  padding: 12px 20px;  
-  margin-right: 0;
+
+.apptDate {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;  
 }
 
 input[type=submit],
@@ -149,4 +231,16 @@ input[type=reset] {
   font-size: 1.1rem;
   background-color: $color-box-purple;
   color: white;
+  
+  @media screen and (max-width: $bp-large) {
+    padding: 8px 15px;
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    padding: 4px 8px;
+    font-size: .9em;    
+  }
 }
+

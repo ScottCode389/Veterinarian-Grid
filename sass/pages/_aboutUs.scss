@@ -36,6 +36,10 @@
         font-size: .9em;
         padding: 0 20px;
       }
+
+      @media screen and (max-width: $bp-small) {
+        font-size: .8em;        
+      }
   }
   
   &__footer {
@@ -87,8 +91,7 @@
   }
 
   &__text {
-    font-size: 1.15rem;
-    
+    font-size: 1.15rem;    
 
     @media screen and (max-width: $bp-large) {
       font-size: 1em;
@@ -114,8 +117,7 @@
 
   &__info {
     grid-column: 2 / -1;
-
-    // padding: 0 50px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -30,11 +30,11 @@
   </header>
 
   <div class="appt__title">
-    <h1 class="appt__heading">Request an Appointment</h1>
+    <h1 class="appt__heading ">Request an Appointment</h1>
+    <span>&lpar;859&rpar; 123-2345</span>
   </div>
 
   <div class="form__wrapper">
-
     <div class="form__wrapper--hours">
       <h2 class="appt__heading--1">Office Hours</h2>
       <div class="appt__hours appt__hours--1">
@@ -69,14 +69,14 @@
 
     <div class="form__wrapper--request">
       <form class="form">
-        <label for="firstName" class="ownerName__first">
+        <label for="firstName">
           First Name:<input type="text" placeholder="First Name">
         </label>
         <label for="lastName">
           Last Name:<input type="text" placeholder="Last Name">
         </label>
 
-        <label for="phone" class="ownerContact__first">
+        <label for="phone">
           Phone:<input type="tel" placeholder="Phone Number">
         </label>
         <label for="email">
@@ -94,53 +94,65 @@
             <input type="radio" name="species">Cat
             <input type="radio" name="species">Rabbit
             <input type="radio" name="species">Bird
-            <input type="radio" name="species">Other (please specify in comments)
+          </div>
+          <div class="form--radio">
+            <input type="radio" name="species">Other
+            <textarea rows="1" cols="30"></textarea>
           </div>
         </label>
 
         <hr class="form__wrapper--hr">
 
-        <label for="firstDateChoice">
-          <div class="form--flex">
-            1st Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
-            Time of Day:
-            <select>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-            </select>
-          </div>
-        </label>
+        <div class="apptRequest">
+          <label for="firstDateChoice">
+            <div class="form--flex">
+              <p>1st Choice Date - Select the date and time of day</p>
+              <div class="apptDate">
+                <span>Date: </span>
+                <input type="date" min="2019-10-01" max="2019-12-31">
+                <span>Time of Day: </span>
+                <select placeholder="Select time of day">
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="No Preference">No Preference</option>
+                </select>
+              </div>
+            </div>
+          </label>
 
-        <label for="secondDateChoice">
-          <div class="form--flex">
-            2nd Choice Date:<input type="date" min="2019-10-01" max="2019-12-31">
-            Time of Day:
-            <select placeholder="Select time of day">
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-            </select>
-          </div>
-        </label>
+          <label for="secondDateChoice">
+            <div class="form--flex">
+              <p>2nd Choice Date - Select the date and time of day</p>
+              <div class="apptDate">
+                <span>Date</span><input type="date" min="2019-10-01" max="2019-12-31">
+                <span>Time of Day: </span>
+                <select placeholder="Select time of day">
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="No Preference">No Preference</option>
+                </select>
+              </div>
+            </div>
+          </label>
 
-        <label for="serviceRequested">
-          <div class="form--flex m-y">
-            Service Requested:
-            <select id="serviceRequest">
-              <option value="Service requested">Service Requested</option>
-              <option value="Annual physical exam">Annual physical exam</option>
-              <option value="Grooming">Grooming</option>
-              <option value="Sick pet">Sick pet</option>
-              <option value="Dental Cleaning">Dental Cleaning</option>
-              <option value="Vaccinations">Vaccinations</option>
-            </select>
-          </div>
-        </label>
-        <label for="comments">
-          Comments:<br>
-          <textarea name="comments" rows="5" cols="110" maxlength="300"></textarea>
-        </label>
+          <label for="serviceRequested">
+            <div class="m-y">
+              Service Requested:
+              <select id="serviceRequest">
+                <option value="Service requested">Service Requested</option>
+                <option value="Annual physical exam">Annual physical exam</option>
+                <option value="Grooming">Grooming</option>
+                <option value="Sick pet">Sick pet</option>
+                <option value="Dental Cleaning">Dental Cleaning</option>
+                <option value="Vaccinations">Vaccinations</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <hr class="form__wrapper--hr">
+
         <div class="form--buttons">
           <input type="submit" value="Submit">
           <input type="reset" value="Reset">

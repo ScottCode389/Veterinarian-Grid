@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @media only screen and (orientation: portrait) {
+    background-image: linear-gradient(rgba($color-black, .25), rgba($color-black, .25)), url(../images/DogVet_SmallestScreen2.jpg);
+  }
+
   @media screen and (max-width: $bp-large) {
     background-image: linear-gradient(rgba($color-black, .25), rgba($color-black, .25)), url(../images/DogVet_resized.jpg);
   }

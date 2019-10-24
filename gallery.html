@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/4753fbed06.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Northern Kentucky Pet Care Clinic - Gallery</title>
 </head>
@@ -14,36 +17,49 @@
     <div class="header__contact">
       <a href="index.html" class="header__link">
         <div class="header__logo">
+          <!-- <span class="logo--text">Northern Kentucky</span> -->
           <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="header__logo--image"
             height=50px width=85px>
-          <span class="header__logo--text">Northern Kentucky Pet Care Clinic</span>
+          <span class="header__logo--text  header__text--responsive">Northern Kentucky Pet Care Clinic</span>
         </div> <!-- header-logo -->
       </a>
-      <div class="header__info">
+      <div class="header__info header__text--responsive">
         <div>&lpar;859&rpar; 123-2345</div>
         <div>
           <span>1234 Main Street</span><br>
           <span></span>Ft. Thomas, KY 41075</span>
         </div>
-      </div>
+      </div> <!-- header__info -->
     </div> <!-- header__contact-->
-    <nav class="header__nav" id="myNav">
-      <ul class="nav">
+  </header>
+
+  <div class="nav-wrapper">
+    <nav class="header__nav header__top" id="myNav">
+      <div class="menu-toggle js-menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="header__phone">&lpar;859&rpar; 123-2345</div>
+
+      <ul class="nav js-nav">
         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="aboutUs.html" class="nav__link">About Us</a></li>
         <li class="nav__item"><a href="services.html" class="nav__link">Pet Services</a></li>
-        <li class="nav__item"><a href="gallery.html" class="nav__link nav__link--active">Photo Gallery</a></li>
+        <li class="nav__item"><a href="gallery.html" class="nav__link nav__link--active ">Photo Gallery</a></li>
       </ul>
     </nav>
-  </header>
-  <h1 class="gallery__heading">
-    <span>We</span>
-    <img src="images/gallery_love.png" alt="Love image" class="gallery__heading--image">
-    <span>Our Patients!</span>
-  </h1>
-  <p class="gallery__text">We enjoy seeing pictures of your pet. Bring your favorite photo in at your next appointment
-    and
-    we'll add it into our gallery below!</p>
+  </div> <!-- nav-wrapper -->
+  <div class="gallery__pageHeading">
+    <h1 class="gallery__heading">
+      <span>We</span>
+      <img src="images/gallery_love.png" alt="Love image" class="gallery__heading--image">
+      <span>Our Patients!</span>
+    </h1>
+    <p class="gallery__text">We enjoy seeing pictures of your pet. Bring your favorite photo in at your next appointment
+      and
+      we'll add it into our gallery below!</p>
+  </div>
   <section class="gallery">
     <figure class="gallery__item gallery__item--1">
       <img src="images/gallery_cat-and-dog-1.jpg" alt="Cat and dog" class="gallery__img">
@@ -106,8 +122,19 @@
     <figure class="gallery__item gallery__item--20">
       <img src="images/gallery_Greyhound_Unsplash.jpg" alt="Greyhound" class="gallery__img">
     </figure>
-
   </section>
+  <footer class="footer footer__gallery">
+    <div class="footer__logo">
+      <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="footer__logo--image"
+        height=50px width=85px>
+    </div> <!-- footer-logo -->
+    <div class="footer__copyright">
+      <p>&copy; 2019 Northern Kentucky Pet Care Clinic</p>
+      <hr class="footer__hr">
+      <p>A fictitional veterinary clinic</p>
+    </div>
+  </footer>
+  <script src="scriptNav.js"></script>
 </body>
 
 </html>

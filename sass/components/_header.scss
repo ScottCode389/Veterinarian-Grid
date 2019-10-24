@@ -1,13 +1,7 @@
-.header {
+.header {  
+  // grid-column: 1 / -1;
+  // grid-row: 1 / span 1;
   
-  grid-column: 1 / -1;
-
-  // display: grid;
-  // // grid-template-rows: repeat(2, 1fr);
-  // // grid-template-rows: 85px 46px;
-  // grid-template-rows: 85px auto;
-  // grid-template-columns: auto;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,57 +34,37 @@
       margin: 6px;      
   }
 
+  &__text--responsive {
+    font-size: 1.1em;
+
+    @media screen and (max-width: $bp-medium) {
+      font-size: .8em;
+      font-weight: normal;
+    }
+  }
+  
+  &__logo--text {
+    @media screen and (max-width: $bp-small) {
+      font-size: .9em;
+      font-weight: bold;
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;      
     justify-content: center;  
     color: $color-logo-dark;   
     line-height: 1.4;  
-  }  
 
-  &__nav {    
-    background-color: $color-gray-light;    
-    font-size: 1.2em;   
-    box-shadow: 0 -3px 5px -1px rgb(150, 150, 150);
-  }
+    @media screen and (max-width: $bp-small) {
+      display: none;
+    }    
+  }      
 }
 
-.nav {   
-  display: grid;      
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  
-  grid-column-gap: 1px;  
-  
-  // height: calc(22vh - 85px);
-  
-  &__item {
-    background-color: $color-box-purple;    
-  }
 
-  &__link {  
-  background-color: $color-box-purple;  
-  color: $color-gray-light;
-  padding: 10px 30px;
-  text-align: center;  
-  text-decoration: none;
-  display: block;
-  transition: all .5s ;
-  -webkit-transition: all .5s ;
-  -moz-transition: all .5s ;
-  -ms-transition: all .5s ;
-  -o-transition: all .5s ;
-  }
-  
-  &__link:hover {
-    background-color: $color-box-purple-light;
-    color: $color-white;
-    font-size: 1.25rem;
-    cursor: pointer;
-    transform: translateY(-3px)  ;
-    -webkit-transform: translateY(-3px)  ;
-    -moz-transform: translateY(-3px)  ;
-    -ms-transform: translateY(-3px)  ;
-    -o-transform: translateY(-3px)  ;
-}
-}
+
+
 
 

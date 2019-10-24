@@ -13,92 +13,114 @@
 </head>
 
 <body>
+  <div class="wrapper__about">
+    <header class="header">
+      <div class="header__contact">
+        <a href="index.html" class="header__link">
+          <div class="header__logo">
+            <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="header__logo--image"
+              height=50px width=85px>
+            <span class="header__logo--text header__text--responsive">Northern Kentucky Pet Care
+              Clinic</span>
+          </div> <!-- header-logo -->
+        </a>
+        <div class="header__info header__text--responsive">
+          <div class="header__phone">&lpar;859&rpar; 123-2345</div>
+          <div class="header__address">
+            <span>1234 Main Street</span><br>
+            <span>Ft. Thomas, KY 41075</span>
+          </div>
+        </div>
+      </div> <!-- header__contact-->
+    </header>
+    <div class="nav-wrapper">
+      <nav class="header__nav header__top" id="myNav">
+        <div class="menu-toggle js-menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="header__phone">&lpar;859&rpar; 123-2345</div>
 
-  <header class="header">
-    <div class="header__contact">
-      <a href="index.html" class="header__link">
-        <div class="header__logo">
-          <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="header__logo--image"
-            height=50px width=85px>
-          <span class="header__logo--text">Northern Kentucky Pet Care Clinic</span>
-        </div> <!-- header-logo -->
-      </a>
-      <div class="header__info">
-        <div>&lpar;859&rpar; 123-2345</div>
-        <div>
-          <span>1234 Main Street</span><br>
-          <span></span>Ft. Thomas, KY 41075</span>
+        <ul class="nav js-nav">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="aboutUs.html" class="nav__link nav__link--active">About Us</a></li>
+          <li class="nav__item"><a href="services.html" class="nav__link">Pet Services</a></li>
+          <li class="nav__item"><a href="gallery.html" class="nav__link">Photo Gallery</a></li>
+        </ul>
+      </nav>
+    </div> <!-- nav-wrapper -->
+
+    <div class="aboutUs__pageHeading">
+      <div class="aboutUs__headingContainer">
+        <i class="fas fa-user-md"></i>
+        <h1 class="aboutUs__heading">Our Staff</h1>
+        <i class="fas fa-user-md"></i>
+      </div>
+      <p class="aboutUs__text">Our professional and courteous staff seeks to provide the best possible medical care,
+        surgical care and dental care for our valued patients. We believe your pet deserves the best veterinary care
+        that
+        Northern Kentucky has to offer – and we take great pride in making sure that they are treated like a member of
+        the
+        family.</p>
+    </div> <!-- pageHeading -->
+    <section class="staff">
+      <div class="vet">
+        <img src="images/aboutUs_vet1.jpg" alt="vet 1" class="vet__img">
+        <div class="vet__info">
+          <span class="vet__name">Dr. Thomas Cat</span>
+          <p class="vet__text">I enjoy conversation with long-time clients, meeting new pets and their owners, as well
+            as
+            educating families on how they can help
+            their furry family members live long and healthy lives. I have two cats, Kitty and Tabby, who we adopted
+            five
+            years ago. </p>
         </div>
       </div>
-    </div> <!-- header__contact-->
-    <nav class="header__nav" id="myNav">
-      <ul class="nav">
-        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="aboutUs.html" class="nav__link nav__link--active">About Us</a></li>
-        <li class="nav__item"><a href="services.html" class="nav__link">Pet Services</a></li>
-        <li class="nav__item"><a href="gallery.html" class="nav__link">Photo Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="aboutUs__headingContainer">
-    <i class="fas fa-user-md"></i>
-    <h1 class="aboutUs__heading">Our Staff</h1>
-    <i class="fas fa-user-md"></i>
+      <hr class="vet__hr">
+      <div class="vet">
+        <img src="images/aboutUs_vet2_Small.jpg" alt="vet 2" class="vet__img">
+        <div class="vet__info">
+          <span class="vet__name">Dr. Braiden Brown</span>
+          <p class="vet__text">I love working with a compassionate, skilled team and being able to make a difference
+            in
+            the health of a patient. The mystery behind each case intrigues me, because each offers a new challenge. I
+            have
+            a
+            horse that I love riding every weekend and two dogs, Bella and Lassie, who are both 2 years old and still
+            very
+            playful.</p>
+        </div>
+      </div>
+      <hr class="vet__hr">
+      <div class="vet">
+        <img src="images/aboutUs_techs.jpg" alt="technicians" class="vet__img">
+        <div class="vet__info">
+          <span class="vet__name">Our technicians</span>
+          <p class="vet__text">Our technicians are medically certified and love animals. They will weigh your pet,
+            take
+            blood, order medicines, and a myriad of other procedures that we couldn't do without. Our techs are the
+            best!
+          </p>
+        </div>
+      </div>
+    </section>
+    <p class="aboutUs__text">Come in and meet our doctors and technicians and introduce your pet. We're happy to
+      schedule a time during regular business hours at your convenience. We're looking forward to meeting you and your
+      pet!</p>
+    <footer class="footer aboutUs__footer">
+      <div class="footer__logo">
+        <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="footer__logo--image"
+          height=50px width=85px>
+      </div> <!-- footer-logo -->
+      <div class="footer__copyright">
+        <p>&copy; 2019 Northern Kentucky Pet Care Clinic</p>
+        <hr class="footer__hr">
+        <p>A fictitional veterinary clinic created to demonstrate CSS Grid and Flexbox</p>
+      </div>
+    </footer>
   </div>
-  <p class="aboutUs__text">Our professional and courteous staff seeks to provide the best possible medical care,
-    surgical care and dental care for our valued patients. We believe your pet deserves the best veterinary care that
-    Northern Kentucky has to offer – and we take great pride in making sure that they are treated like a member of the
-    family.</p>
-  <section class="staff">
-    <div class="vet">
-      <img src="images/aboutUs_vet1.jpg" alt="vet 1" class="vet__img">
-      <div class="vet__info">
-        <span class="vet__name">Dr. Thomas Cat</span>
-        <p class="vet__text">I enjoy conversation with long-time clients, meeting new pets and their owners, as well
-          as
-          educating families on how they can help
-          their furry family members live long and healthy lives. I have two cats, Kitty and Tabby, who we adopted five
-          years ago. </p>
-      </div>
-    </div>
-    <hr class="vet__hr">
-    <div class="vet">
-      <img src="images/aboutUs_vet2.jpg" alt="vet 2" class="vet__img">
-      <div class="vet__info">
-        <span class="vet__name">Dr. Braiden Brown</span>
-        <p class="vet__text">I love working with a compassionate, skilled team and being able to make a difference
-          in
-          the health of a patient. The mystery behind each case intrigues me, because each offers a new challenge. I
-          have
-          a
-          horse that I love riding every weekend and two dogs, Bella and Lassie, who are both 2 years old and still very
-          playful.</p>
-      </div>
-    </div>
-    <hr class="vet__hr">
-    <div class="vet">
-      <img src="images/aboutUs_techs.jpg" alt="technicians" class="vet__img">
-      <div class="vet__info">
-        <span class="vet__name">Our technicians</span>
-        <p class="vet__text">Our technicians are medically certified and love animals. They will weigh your pet,
-          take
-          blood, order medicines, and a myriad of other procedures that we couldn't do without. Our techs are the best!
-        </p>
-      </div>
-    </div>
-  </section>
-  <footer class="footer aboutUs__footer">
-    <div class="footer__logo">
-      <img src="./images/DogCatLogo_ElisabethLeunert_from_Pixabay.png" alt="logo" class="footer__logo--image"
-        height=50px width=85px>
-    </div> <!-- footer-logo -->
-    <div class="footer__copyright">
-      <p>&copy; 2019 Northern Kentucky Pet Care Clinic</p>
-      <hr class="footer__hr">
-      <p>A fictitional veterinary clinic created to demonstrate CSS Grid and play with colors!</p>
-    </div>
-  </footer>
+  <script src="scriptNav.js"></script>
 </body>
 
 </html>

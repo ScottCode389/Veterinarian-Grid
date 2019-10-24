@@ -8,6 +8,11 @@
     width: 100%;
     object-fit: cover;
     display: block;
+
+    @media screen and (max-width: $bp-small) {
+      height: 97%;
+      width: 97%;
+    }
   }
 
 @mixin heading {
@@ -26,3 +31,4 @@
   text-align: center;
   font-size: 1.2rem;
 }
+

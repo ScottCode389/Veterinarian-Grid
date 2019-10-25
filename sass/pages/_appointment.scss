@@ -226,8 +226,8 @@ input[type=date]{
 input[type=submit],
 input[type=reset] {
   margin-top: 30px;
-  width: 30%;
-  padding: 12px 20px;  
+  width: 25%;
+  padding: 12px 15px;  
   font-size: 1.1rem;
   background-color: $color-box-purple;
   color: white;
@@ -238,9 +238,26 @@ input[type=reset] {
     margin-top: 0;
   }
 
-  @media screen and (max-width: $bp-medium) {
-    padding: 4px 8px;
+  @media screen and (max-width: $bp-small) {    
+    padding: 6px 8px;
     font-size: .9em;    
+  }
+}
+
+.form--buttons {
+
+  & a {  
+  margin-left: 30px;     
+  color: $color-box-purple;    
+  }
+
+  & i {
+    margin-right: 5px;
+    font-size: 1.1em;
+
+    @media screen and (max-width: $bp-small) {    
+      font-size: 1em;    
+    }
   }
 }
 

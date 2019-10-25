@@ -1337,8 +1337,8 @@ input[type=date] {
 input[type=submit],
 input[type=reset] {
   margin-top: 30px;
-  width: 30%;
-  padding: 12px 20px;
+  width: 25%;
+  padding: 12px 15px;
   font-size: 1.1rem;
   background-color: #5066b5;
   color: white; }
@@ -1348,11 +1348,22 @@ input[type=reset] {
       padding: 8px 15px;
       font-size: 1em;
       margin-top: 0; } }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 500px) {
     input[type=submit],
     input[type=reset] {
-      padding: 4px 8px;
+      padding: 6px 8px;
       font-size: .9em; } }
+
+.form--buttons a {
+  margin-left: 30px;
+  color: #5066b5; }
+
+.form--buttons i {
+  margin-right: 5px;
+  font-size: 1.1em; }
+  @media screen and (max-width: 500px) {
+    .form--buttons i {
+      font-size: 1em; } }
 
 .coupon__print {
   height: 200px;

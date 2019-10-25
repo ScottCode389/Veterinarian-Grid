@@ -88,3 +88,7 @@ window.onclick = function (event) {
 // when you click on "menu-toggle" toggle back to "is-active"
 
 
+function myFunction() {
+  alert("Thank you.  We will contact you with an appointment time.");
+
+}

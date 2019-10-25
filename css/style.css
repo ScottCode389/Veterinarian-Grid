@@ -515,6 +515,9 @@ h3 {
   font-size: 1.25rem;
   font-style: italic;
   width: 40%; }
+  .modal__content img {
+    width: 5%;
+    margin: 0 10px; }
 
 /* The Close Button */
 .close-btn {

@@ -59,7 +59,7 @@ function showSlide() {
   dots[slideIndex - 1].className += " active";
 }
 
-//  MODAL
+//  MODALS
 
 var modal = document.getElementById("myModal");
 var modalBtn = document.getElementById("modal-btn");
@@ -82,6 +82,47 @@ window.onclick = function (event) {
   }
 }
 
+var appleModal = document.getElementById("appleModal");
+var appleModalBtn = document.getElementById("modal-btn-apple");
+var closeBtn = document.getElementsByClassName("close-btn")[1];
+
+// When the user clicks the button, open the modal 
+appleModalBtn.onclick = function () {
+  appleModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function () {
+  appleModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    appleModal.style.display = "none";
+  }
+}
+
+var googleModal = document.getElementById("googleModal");
+var googleModalBtn = document.getElementById("modal-btn-google");
+var closeBtn = document.getElementsByClassName("close-btn")[2];
+
+// When the user clicks the button, open the modal 
+googleModalBtn.onclick = function () {
+  googleModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function () {
+  googleModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    googleModal.style.display = "none";
+  }
+}
 // Mobile Navigation
 
 // when you click on "menu-toggle" toggle the .nav class to mobile-nav
@@ -90,5 +131,4 @@ window.onclick = function (event) {
 
 function myFunction() {
   alert("Thank you.  We will contact you with an appointment time.");
-
 }

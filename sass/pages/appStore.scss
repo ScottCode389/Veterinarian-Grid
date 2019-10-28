@@ -1,0 +1,86 @@
+.appstore {
+  display: grid;
+  grid-template-columns: [full-start] minmax(10px, 1fr) [center-start] repeat(3, 1fr) [center-end] minmax(10px, 1fr) [full-end];
+  grid-template-rows: 10vw 20vw 10vw 20vw;
+  grid-row-gap: 10px;  
+  align-items: center;
+  padding: 10px;
+
+  @media screen and (max-width: $bp-medium) {
+    grid-template-rows: 15vw 20vw 10vw 20vw 10vw;
+    grid-row-gap: 5px;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    grid-template-rows: 20vw 20vw 20vw 20vw;
+    grid-row-gap: 15px;
+  }
+  
+
+  & h1, h2 {
+    grid-column: full-start / full-end;    
+    color: black;
+    font-size: 1.1em;
+    margin: 60px auto;  
+    text-align: center;  
+    
+    @media screen and (max-width: $bp-large) {
+      font-size: 1em;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+      font-size: .9em;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+      font-size: .8em;
+    }
+  }
+
+  & h1 {
+    grid-row: 1 / span 1;    
+  }
+
+  & h2 {    
+    grid-row: 3 / span 1;    
+  }
+
+  &__sad {
+    grid-row: 2 / span 1;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-rows: minmax(70px, 1fr);
+    grid-column-gap: 5px; 
+
+    @media screen and (max-width: $bp-small) {
+      grid-column-gap: 0;
+    }
+  }   
+
+  &__happy {
+    grid-row: 4 / span 1;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-rows: minmax(70px, 1fr);
+    grid-column-gap: 5px; 
+
+    @media screen and (max-width: $bp-small) {
+      grid-column-gap: 0;
+    }
+  } 
+
+  &__home {     
+    display: table;
+    margin: 20px auto;
+        
+    & a {      
+      color: black;
+      font-size: .9em;
+    }    
+  }
+}
+

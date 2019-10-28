@@ -34,137 +34,139 @@
     <h1 class="appt__heading ">Request an Appointment</h1>
     <span>&lpar;859&rpar; 123-2345</span>
   </div>
-  <form action="/action_page.php" onsubmit="myFunction()">
-    <div class="form__wrapper">
-      <div class="form__wrapper--hours">
-        <h2 class="appt__heading--1">Office Hours</h2>
-        <div class="appt__hours appt__hours--1">
-          <span>Monday</span>
-          <span>7:30 a.m. - 5:00 p.m.</span>
+
+  <div class="form__wrapper">
+    <div class="form__wrapper--hours">
+      <h2 class="appt__heading--1">Office Hours</h2>
+      <div class="appt__hours">
+        <div class="appt__hours--flex appt__hours--1">
+          <span class="appt__day">Monday</span>
+          <span class="appt__hour">7:30 a.m. - 5:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--2">
+        <div class="appt__hours--flex appt__hours--2">
           <span>Tuesday</span>
           <span>9:00 a.m. - 7:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--3">
+        <div class="appt__hours--flex appt__hours--3">
           <span>Wednesday</span>
           <span>7:30 a.m. - 5:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--4">
+        <div class="appt__hours--flex appt__hours--4">
           <span>Thursday</span>
           <span>9:00 a.m. - 7:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--5">
+        <div class="appt__hours--flex appt__hours--5">
           <span>Friday</span>
           <span>7:30 a.m. - 2:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--6">
+        <div class="appt__hours--flex appt__hours--6">
           <span>Saturday</span>
           <span>9:00 a.m. - 1:00 p.m.</span>
         </div>
-        <div class="appt__hours appt__hours--7">
+        <div class="appt__hours--flex appt__hours--7">
           <span>Sunday</span>
           <span>Closed</span>
         </div>
-      </div> <!--  appt hours  -->
+      </div>
+      <a href="index.html"><i class="fas fa-chevron-circle-left">&nbsp;Home</i></a>
+    </div> <!--  form__wrapper hours  -->
 
-      <div class="form__wrapper--request">
-        <form class="form">
-          <label for="firstName">
-            First Name:<input type="text" placeholder="First Name" name="firstName" required>
-          </label>
-          <label for="lastName">
-            Last Name:<input type="text" placeholder="Last Name" name="lastName" required>
-          </label>
+    <div class="form__wrapper--request">
+      <form class="form">
+        <label for="firstName">
+          First Name:<input type="text" placeholder="First Name" name="firstName" required>
+        </label>
+        <label for="lastName">
+          Last Name:<input type="text" placeholder="Last Name" name="lastName" required>
+        </label>
 
-          <label for="phone">
-            Phone:<input type="tel" placeholder="Phone Number" name="phoneNumber" required>
-          </label>
-          <label for="email">
-            Email:<input type="email" placeholder="Email" name="email" required>
-          </label>
+        <label for="phone">
+          Phone:<input type="tel" placeholder="Phone Number" name="phoneNumber" required>
+        </label>
+        <label for="email">
+          Email:<input type="email" placeholder="Email" name="email" required>
+        </label>
 
-          <label for="petName">
-            Pet:<input type="text" placeholder="Pet's Name" name="petName" required>
-          </label>
+        <label for="petName">
+          Pet:<input type="text" placeholder="Pet's Name" name="petName" required>
+        </label>
 
-          <p class="form--paragraph">Species:</p>
-          <label for="species">
-            <div class="form--radio">
-              <input type="radio" name="species" required>Dog
-              <input type="radio" name="species">Cat
-              <input type="radio" name="species">Rabbit
-              <input type="radio" name="species">Bird
-            </div>
-            <div class="form--radio">
-              <input type="radio" name="species" required>Other
-              <textarea rows="1" cols="30"></textarea>
-            </div>
-          </label>
+        <p class="form--paragraph">Species:</p>
+        <label for="species">
+          <div class="form--radio">
+            <input type="radio" name="species" required>Dog
+            <input type="radio" name="species">Cat
+            <input type="radio" name="species">Rabbit
+            <input type="radio" name="species">Bird
+          </div>
+          <div class="form--radio">
+            <input type="radio" name="species" required>Other
+            <textarea rows="1" cols="30"></textarea>
+          </div>
+        </label>
 
-          <hr class="form__wrapper--hr">
+        <hr class="form__wrapper--hr">
 
-          <div class="apptRequest">
-            <label for="firstDateChoice">
-              <div class="form--flex">
-                <p>1st Choice Date - Select the date and time of day</p>
-                <div class="apptDate">
-                  <span>Date: </span>
-                  <input type="date" min="2019-10-01" max="2019-12-31" required>
-                  <span>Time of Day: </span>
-                  <select placeholder="Select time of day" required>
-                    <option value="Morning">Morning</option>
-                    <option value="Afternoon">Afternoon</option>
-                    <option value="Evening">Evening</option>
-                    <option value="No Preference">No Preference</option>
-                  </select>
-                </div>
-              </div>
-            </label>
-
-            <label for="secondDateChoice">
-              <div class="form--flex">
-                <p>2nd Choice Date - Select the date and time of day</p>
-                <div class="apptDate">
-                  <span>Date</span><input type="date" min="2019-10-01" max="2019-12-31" required>
-                  <span>Time of Day: </span>
-                  <select placeholder="Select time of day" required>
-                    <option value="Morning">Morning</option>
-                    <option value="Afternoon">Afternoon</option>
-                    <option value="Evening">Evening</option>
-                    <option value="No Preference">No Preference</option>
-                  </select>
-                </div>
-              </div>
-            </label>
-
-            <label for="serviceRequested">
-              <div class="m-y">
-                Service Requested:
-                <select required>
-                  <option value="">Service Requested</option>
-                  <option value="Annual physical exam">Annual physical exam</option>
-                  <option value="Grooming">Grooming</option>
-                  <option value="Sick pet">Sick pet</option>
-                  <option value="Dental Cleaning">Dental Cleaning</option>
-                  <option value="Vaccinations">Vaccinations</option>
+        <div class="apptRequest">
+          <label for="firstDateChoice">
+            <div class="form--flex">
+              <p>1st Choice Date - Select the date and time of day</p>
+              <div class="apptDate">
+                <span>Date: </span>
+                <input id="datefield" type="date" min="2019-10-01" max="2019-12-31" required>
+                <span>Time of Day: </span>
+                <select placeholder="Select time of day" required>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="No Preference">No Preference</option>
                 </select>
               </div>
-            </label>
-          </div>
-          <hr class="form__wrapper--hr">
+            </div>
+          </label>
 
-          <div class="form--buttons">
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-            <a href="index.html"><i class="fas fa-chevron-circle-left">&nbsp;Home</i></a>
-          </div>
+          <label for="secondDateChoice">
+            <div class="form--flex">
+              <p>2nd Choice Date - Select the date and time of day</p>
+              <div class="apptDate">
+                <span>Date</span><input type="date" min="2019-10-01" max="2019-12-31" required>
+                <span>Time of Day: </span>
+                <select placeholder="Select time of day" required>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="No Preference">No Preference</option>
+                </select>
+              </div>
+            </div>
+          </label>
 
-        </form>
-      </div> <!-- form wrapper request-->
-    </div> <!-- form wrapper -->
-  </form>
-  <script src="script.js"></script>
+          <label for="serviceRequested">
+            <div class="m-y">
+              Service Requested:
+              <select required>
+                <option value="">Service Requested</option>
+                <option value="Annual physical exam">Annual physical exam</option>
+                <option value="Grooming">Grooming</option>
+                <option value="Sick pet">Sick pet</option>
+                <option value="Dental Cleaning">Dental Cleaning</option>
+                <option value="Vaccinations">Vaccinations</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <hr class="form__wrapper--hr">
+
+        <div class="form--buttons">
+          <input type="submit" name="button" value="Submit" onclick="myFunction()">
+          <input type="reset" value="Reset">
+          <a href="index.html"><i class="fas fa-chevron-circle-left">&nbsp;Home</i></a>
+        </div>
+    </div> <!-- form wrapper request-->
+  </div> <!-- form wrapper -->
+
+  <script src="scriptSubmit.js"></script>
+  <script src="scriptDate.js"></script>
 </body>
 
 </html>

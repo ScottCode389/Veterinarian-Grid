@@ -171,8 +171,7 @@
 
     @media screen and (max-width: $bp-medium) {
       margin-left: 5px;             
-    }
-
+    }    
   }  
 
   &__responsive {
@@ -180,11 +179,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;      
-    }
-  
+    }  
   }
   
-  &__img {
+  &__img {    
     height: 150px;
     width: 50%;
     margin: 40px 0;

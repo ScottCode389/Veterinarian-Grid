@@ -1,7 +1,7 @@
 // SUBMIT BUTTON
 
-function myFunction() {
+// function myFunction() {
 
-  alert("Submission successful");
-}
+//   alert("Submission successful");
+// }
 
